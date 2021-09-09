@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/78ce32df8e.js" crossorigin="anonymous"></script>
+    <script src="cronometroscript.js"></script>
+    <title>Cronômetro</title>
+</head>
+<body>
+    <div id="container-toggle">
+        <a href="#" id="theme-toggle"><i class="fas fa-lightbulb icon-large"></i></a>
+    </div>
+    <div class="container">
+        <h1>CRONÔMETRO</h1>
+            <button class="button" id="start-btn" onclick="start();">Start</button>
+            <button class="button" id="pause-btn" onclick="pause();">Pause</button>
+            <button class="button" id="stop-btn" onclick="stop();">Stop</button>
+        <h2 id="counter">
+            00:00:00:00
+        </h2>
+    </div>
+    <script src="theme-toggle.js"></script>
+</body>
+</html>
