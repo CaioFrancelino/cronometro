@@ -10,7 +10,7 @@ let time = 100;
 let cron;
 
 function runningCron() {
-    document.getElementById('start-btn').style.animation = 'glowing 1300ms infinite';
+    document.getElementById('start-btn').style.animation = 'glowing 700ms infinite';
 }
 
  
