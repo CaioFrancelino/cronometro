@@ -76,6 +76,10 @@ button:hover {
     background-color: rgb(92, 241, 92);
 }
 
+.button-disabled {
+    pointer-events: none;
+}
+
 @keyframes glowing {
     0% {
       background-color: rgb(92, 241, 92);
@@ -86,6 +90,7 @@ button:hover {
     100% {
       background-color: rgb(92, 241, 92);
     }
+
   }
 
 

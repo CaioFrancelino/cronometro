@@ -1,5 +1,3 @@
-"use strict"
-
 let hh = 0;
 let mm = 0;
 let ss = 0;
@@ -11,28 +9,29 @@ let cron;
 
 function runningCron() {
     document.getElementById('start-btn').style.animation = 'glowing 700ms infinite';
+    document.getElementById('start-btn').classList.add('button-disabled');
 }
 
  
  function stopRunningCron() {
      document.getElementById('start-btn').style.animation = '';
+     document.getElementById('start-btn').classList.remove('button-disabled');
  }
 
  
 
 function start() {
     cron = setInterval(() => { timer(); }, time);
-    document.addEventListener("click",function() { runningCron(); });
-
+    
+    runningCron();
+    
 };
 
 function pause() {
     clearInterval(cron);
-    document.addEventListener("click", (event) => {
-        event.preventDefault();
-   
-        stopRunningCron();
-       });
+    
+   stopRunningCron();
+
 };
 
 function stop() {
@@ -42,14 +41,15 @@ function stop() {
     ss = 0;
     ms = 0;
 
-    document.addEventListener("click", (event) => {
-        event.preventDefault();
-   
-        stopRunningCron();
-       });
+    stopRunningCron();
 
     document.getElementById('counter').innerText = "00:00:00:00";
 };
+
+// function preventDoubleInterval () {
+
+// }
+
 
 function timer() {
 
@@ -68,7 +68,8 @@ function timer() {
             }
         }
     }
+    
     let format = (hh < 10 ? '0' + hh : hh) + ':' + (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss) + ':' + (ms < 10 ? '0' + ms : ms);
+    
     document.getElementById('counter').innerText = format;
 };
-
