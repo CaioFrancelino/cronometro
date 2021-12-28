@@ -11,6 +11,7 @@
 body {
     background-color: rgb(216, 216, 216);
     font-family: 'Poppins', sans-serif;
+    transition: all 1s;
 }
 
 div {
@@ -23,7 +24,7 @@ div {
     box-shadow: 8px 8px 26px rgba(0,0,0,0.2);
     border-radius: 28px;
     text-align: center;
-    transition: all 2s;
+    transition: all 1s;
 }
 
 .button {
