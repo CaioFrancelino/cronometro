@@ -23,6 +23,7 @@ div {
     box-shadow: 8px 8px 26px rgba(0,0,0,0.2);
     border-radius: 28px;
     text-align: center;
+    transition: all 2s;
 }
 
 .button {
